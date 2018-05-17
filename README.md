@@ -5,3 +5,7 @@ Pomoću Yeomana i njegovog web app generatora postavljen environment, za slike k
 ### Primjer 
 
 url : [slice.tihomir-selak.from.hr](http://slice.tihomir-selak.from.hr/).
+
+#### Vrijeme riješavanja:
+
+1 dan
