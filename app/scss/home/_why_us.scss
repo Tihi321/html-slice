@@ -1,0 +1,38 @@
+  .why-us-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: $default_grey;
+    @media screen and (min-width: $size_tablet) {
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+    .why-us-image {
+      background: url("https://picsum.photos/500/330") no-repeat;
+      background-size: cover;
+    }
+    .why-us {
+      padding: 30px 30px;
+      @media screen and (min-width: $size_mobile) {
+        padding: 60px 30px;
+      }
+      @media screen and (min-width: $size_tablet) {
+        padding: 140px 70px;
+      }
+      >div {
+        @media screen and (min-width: $size_tablet) {
+          max-width: 490px;
+        }
+        h1 {
+          margin-top: 0;
+        }
+        div {
+          text-align: justify;
+          margin-bottom: 0;
+          @media screen and (min-width: $size_tablet) {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,42 @@
+.header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 30vh;
+  box-shadow: 0 0 800px 40px rgba(0, 0, 0, 0.5) inset;
+  background-image: url("https://picsum.photos/1600/900");
+  padding: 27px 30px 30px;
+  color: #fff;
+  @media screen and (min-width: $size_tablet) {
+    min-height: 900px;
+  }
+  @media screen and (min-width: $size_small_desktop) {
+    padding: 27px 100px 60px;
+  }
+  .show-more {
+    text-align: center;
+  }
+  .welcome {
+    text-align: center;
+    & > p:first-child {
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      font-size: 0.73em;
+    }
+    .coding {
+      margin: 30px 0;
+      h3,
+      p {
+        font-size: 2em;
+        line-height: 1.1em;
+        font-weight: 300;
+        margin: 10px 0;
+        @media screen and (min-width: $size_tablet) {
+          font-size: 2.8em;
+        }
+      }
+    }
+  }
+  @import "navigation";
+}

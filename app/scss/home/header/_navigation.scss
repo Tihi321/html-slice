@@ -1,0 +1,90 @@
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  position: relative;
+  @media screen and (min-width: $size_tablet) {
+    grid-template-columns: 1fr 4fr;
+  }
+  .logo_container {
+    position: relative;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    .header-logo-link {
+      text-align: right;
+      @media screen and (min-width: $size_tablet) {
+        text-align: center;
+      }
+    }
+    @media screen and (min-width: $size_tablet) {
+      position: initial;
+      justify-content: flex-start;
+    }
+  }
+  .top-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+    @media screen and (min-width: $size_tablet) {
+      justify-content: flex-end;
+    }
+    .nav {
+      letter-spacing: 0.2em;
+      font-size: 0.78em;
+      font-weight: 500;
+      float: unset;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and (min-width: $size_tablet) {
+        flex-direction: row;
+        font-size: .78em;
+      }
+      @media screen and (min-width: $size_small_desktop) {
+        letter-spacing: 0.3em;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+        &.search {
+          width: 23px;
+          height: 23px;
+          background-image: url("../../images/Search.png");
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase;
+          transition: color 300ms ease;
+          &:hover {
+            transition: color 300ms ease;
+            color: darken($color: #fff, $amount: 20%);
+          }
+        }
+        @media screen and (min-width: $size_tablet) {
+          margin-left: 15px;
+          margin-bottom: 0;
+          text-align: center;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+        @media screen and (min-width: $size_small_desktop) {
+          margin-left: 25px;
+          &.search {
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+  }
+}

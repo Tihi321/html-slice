@@ -1,0 +1,164 @@
+.portfolio {
+  .section {
+    padding: 30px 30px;
+  }
+  .portfolio-container {
+    .postfolio-menu {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px;
+      flex-direction: column;
+      @media screen and(min-width: $size_mobile) {
+        flex-direction: row;
+      }
+      li {
+        cursor: pointer;
+        text-transform: uppercase;
+        color: $portfolio_blue;
+        font-weight: 700;
+        margin: 0 1em;
+        padding: 0.5em;
+        transition: all 100ms ease;
+        @media screen and(min-width:$size_mobile) {
+          padding: 0em;
+          &:hover:not(&:disabled) {
+            cursor: pointer;
+            color: darken($portfolio_blue, 15%);
+            transition: all 100ms ease;
+          }
+        }
+        &.active {
+          cursor: default;
+          background-color: $portfolio_blue;
+          color: #fff;
+          @media screen and(min-width: $size_mobile) {
+            background-color: #fff;
+            color: $portfolio_blue;
+            border-bottom: 2px solid $portfolio_blue;
+          }
+        }
+      }
+    }
+    .loading-wrapper {
+      animation: FADE-IN 1s 1;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $default_grey;
+      .loading {
+        text-transform: uppercase;
+        font-size: 2em;
+        color: $portfolio_blue;
+      }
+    }
+
+    .gallery-max-height {
+      animation: FADE-IN 1s 1;
+      overflow: hidden;
+      max-height: 800px;
+      position: relative;
+      transition: all 300ms ease;
+      &::after {
+        pointer-events: none;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        box-shadow: 0px -10px 20px -5px rgba(0, 0, 0, 0.6) inset;
+      }
+    }
+    .gallerry-no-max-height{
+      transition: all 300ms ease;
+    }
+    .btn-wrapper {
+      margin: 3em 0;
+      text-align: center;
+      .view-all-btn {
+        background: #fff;
+        border: 1px solid $portfolio_blue;
+        color: $portfolio_blue;
+        padding: 1em 3em;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 100ms ease;
+        &:hover:not(&:disabled) {
+          cursor: pointer;
+          color: darken($portfolio_blue, 15%);
+          border-color: darken($portfolio_blue, 15%);
+          transition: all 100ms ease;
+        }
+        &:disabled {
+          cursor: default;
+          color: lighten($portfolio_blue, 15%);
+          border-color: lighten($portfolio_blue, 15%);
+        }
+      }
+    }
+    .my-masonry-grid {
+      display: flex;
+      width: auto;
+      .my-masonry-grid_column {
+        .gallery-image {
+          background-clip: padding-box;
+          line-height: 0;
+          position: relative;
+          margin: 0;
+          img {
+            width: 100%;
+          }
+          .gallery-overlay {
+            cursor: default;
+            background-color: rgba(63, 80, 98, 1);
+            border: 10px solid #d0d0d0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 100ms ease;
+            div {
+              h1,
+              p {
+                color: #fff;
+              }
+              h1 {
+                text-transform: uppercase;
+              }
+              p {
+                font-size: 1.2em;
+                text-transform: capitalize;
+                text-align: center;
+              }
+              .divider {
+                margin-top: 2em;
+                width: 50%;
+              }
+            }
+          }
+          &:hover {
+            .gallery-overlay {
+              transition: opacity 100ms ease;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+  @keyframes FADE-IN {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

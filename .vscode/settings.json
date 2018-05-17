@@ -1,0 +1,5 @@
+{
+  "prettier.eslintIntegration": true,
+  "npm-intellisense.importLinebreak": ";\r\n",
+  "liveServer.settings.root": "/app/",
+}
