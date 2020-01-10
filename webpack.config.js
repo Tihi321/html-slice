@@ -7,10 +7,10 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: {
-    bundle: path.resolve(__dirname, 'app/src/') + '/index.js'
+    bundle: path.resolve(__dirname, 'docs/src/') + '/index.js'
   },
   output: {
-    path: path.resolve(__dirname, 'app/scripts'),
+    path: path.resolve(__dirname, 'docs/scripts'),
     filename: './[name].js'
   },
   plugins: [
